@@ -1,0 +1,113 @@
+/* Base layout and typography */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Start screen */
+#start-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding-top: 60px;
+}
+
+.start-text {
+  text-align: center;
+}
+
+/* Game screen */
+.hidden {
+  display: none;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Utility buttons */
+.utility-button {
+  padding: 6px 12px;
+  font-size: 14px;
+  width: auto;
+}
+
+/* Color styles */
+.green-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.green-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.blue-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.blue-button:hover:not(:disabled) {
+  background-color: #0b7dda;
+}
+
+/* Disabled state */
+.disabled {
+  background-color: #ccc !important;
+  color: #666 !important;
+  cursor: not-allowed !important;
+}
+
+/* Feedback styling via JavaScript for correct/incorrect */
+.correct {
+  background-color: #4CAF50 !important;
+}
+
+.incorrect {
+  background-color: #f44336 !important;
+}
+
+/* Note buttons container */
+#note-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Score section */
+.score {
+  margin-top: 20px;
+}
+
+/* Responsive behavior */
+@media (max-width: 500px) {
+  #note-buttons-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
