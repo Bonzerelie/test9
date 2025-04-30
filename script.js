@@ -64,6 +64,8 @@ function loadNewNote() {
   currentNote = allNotes[Math.floor(Math.random() * allNotes.length)];
   playNote(currentNote);
   promptText.textContent = 'Which note was played?';
+
+  // Initially disable the 'Next' button and grey it out
   nextBtn.disabled = true;
   nextBtn.classList.add('disabled');
 }
@@ -87,8 +89,12 @@ function handleAnswer(e) {
   }
 
   updateScore();
+
+  // Enable 'Next' button
   nextBtn.disabled = false;
   nextBtn.classList.remove('disabled');
+  
+  // Disable other buttons
   noteButtons.forEach(btn => btn.disabled = true);
 }
 
